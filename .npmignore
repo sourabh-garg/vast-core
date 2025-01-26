@@ -1,0 +1,6 @@
+.vscode
+.changeset
+.github
+buildParams
+node_modules
+packages

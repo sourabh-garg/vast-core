@@ -1,0 +1,45 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": { "project": "./tsconfig.json" },
+    "env": { "es6": true, "browser": true, "commonjs": true },
+    "ignorePatterns": ["node_modules", "build", "coverage"],
+    "plugins": ["import", "eslint-comments", "functional"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:eslint-comments/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:import/typescript",
+        //    "plugin:functional/lite",
+        "prettier",
+        "prettier/@typescript-eslint"
+    ],
+    "globals": { "BigInt": true, "console": true, "WebAssembly": true },
+    "rules": {
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/ban-ts-comment": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "eslint-comments/disable-enable-pair": ["error", { "allowWholeFile": true }],
+        "eslint-comments/no-unused-disable": "error",
+        "import/order": ["error", { "newlines-between": "always", "alphabetize": { "order": "asc" } }],
+        "sort-imports": ["error", { "ignoreDeclarationSort": true, "ignoreCase": true }]
+    },
+    "overrides": [
+        {
+            "files": ["**/*.spec.js", "**/*.test.js", "**/*.spec.ts", "**/*.test.ts"],
+            "env": {
+                "jest": true // now **/*.test.js files' env has both es6 *and* jest
+            },
+            // Can't extend in overrides: https://github.com/eslint/eslint/issues/8813
+            // "extends": ["plugin:jest/recommended"]
+            "plugins": ["jest"],
+            "rules": {
+                "jest/no-disabled-tests": "warn",
+                "jest/no-focused-tests": "error",
+                "jest/no-identical-title": "error",
+                "jest/prefer-to-have-length": "warn",
+                "jest/valid-expect": "error"
+            }
+        }
+    ]
+}

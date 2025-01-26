@@ -1,0 +1,58 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build output
+lib/
+dist/
+coverage/
+*.tsbuildinfo
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp files
+*.log
+tmp/
+target/
+
+# Package directory
+public/
+build/
+tmp/
+target/
+coverage
+All\ Specs/
+cypress/videos/
+codeDocumentation
+test-report.html
+mochawesome-report/
+testfile.ts
+
+# Root directory
+.npmrc
+.npm
+.eslintcache
+yarn-debug.log*
+yarn-error.log*
+*.tgz
+.env
+log
+.nyc_output
+.cache
+.docs
+.package
+.tmp
+*.cert
+*.key
+**\(failed\).png
+**__diff_output__**

@@ -1,0 +1,24 @@
+{
+    "overall": {
+        "line_coverage": {
+            "threshold": {
+                "fail": {
+                    "value": 50
+                },
+                "warn": {
+                    "value": 55
+                }
+            },
+            "drop": {
+                "fail": {
+                    "value": 10,
+                    "type": "percentage"
+                },
+                "warn": {
+                    "value": 5,
+                    "type": "percentage"
+                }
+            }
+        }
+    }
+}
